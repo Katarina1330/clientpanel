@@ -22,7 +22,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 // Service Imports
-import { ClientService} from './services/client.service'
+import { ClientService} from './services/client.service';
+import {AuthService} from './services/auth.service';
 
 const appRoutes: Routes = [
   {path:'', component:DashboardComponent},
@@ -67,7 +68,8 @@ export const firebaseConfig = {
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    ClientService
+    ClientService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
